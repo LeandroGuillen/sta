@@ -1,0 +1,61 @@
+#!/bin/bash
+
+apt-get --assume-yes purge libxml2
+apt-get --assume-yes purge libxml2-dev
+apt-get --assume-yes purge openssl*
+apt-get --assume-yes purge libncurses*
+apt-get --assume-yes purge libnwet*
+apt-get --assume-yes purge libsqlite*
+apt-get --assume-yes purge build-essential
+apt-get --assume-yes install libcrypt*
+apt-get --assume-yes install libgcrypt11*
+
+apt-get --assume-yes install libxml2
+apt-get --assume-yes install libxml2-dev
+apt-get --assume-yes install openssl*
+apt-get --assume-yes install libncurses*
+apt-get --assume-yes install libnwet*
+apt-get --assume-yes install libsqlite*
+apt-get --assume-yes install build-essential
+apt-get --assume-yes install libcrypt*
+apt-get --assume-yes install libgcrypt11*
+
+#wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-11-current.tar.gz
+
+tar -xzvf asterisk-1.8.5.0.tar.gz
+cd asterisk-1.8.5.0/
+
+#### TLS ####
+# Recortar fichero pem con begin certificate y end certificate
+# Al configurar blink, 
+
+ 
+./configure
+
+make menuselect
+make
+make install
+make config
+make samples
+
+cd ..
+
+cp extensions.conf /etc/asterisk/
+cp sip.conf /etc/asterisk/
+cp users.conf /etc/asterisk/
+
+/etc/init.d/asterisk restart
+
+
+# Softphone
+
+# Al configurar blink requiere un unico fichero que contenga el contenido con la clave (RSA private key ...)
+# se concatena el valor del certificado. Aquí no hace aflta que se corte el certificado
+
+##
+# [CLIENTE] cat certificado.pem >> key.pem
+# [CA] cortar BEGIN - END
+# [CENTRALITA ASTERISK] cortar BEGIN - END
+#
+# EN CASO DE FALLO RESET TCP OJO CON RUTAS DE CERTIFICADOS EN SIP.CONF 
+##

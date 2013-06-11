@@ -1,0 +1,10 @@
+# Ejemplos de ordenes get y set
+
+snmpget -v 2c -c com_sta [ipagente] system.sysLocation.0
+
+snmpset -v 2c -c com_sta_rw [ipagente] system.sysName.0 s "Ejemplo"
+snmpget -v 2c -c com_sta [ipagente] system.sysname.0 #Deberia obetner ejemplo
+
+
+
+

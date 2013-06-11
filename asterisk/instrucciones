@@ -1,0 +1,24 @@
+INSTRUCCIONES PARA SECURIZAR ASTERISK
+
+1- Crear certificados modificando el campo common-name con la ip del equipo que quiere el certificado. Se crean por este orden
+	-CA
+	-servidor
+	-cliente1
+	-cliente2
+
+2- Modificar en el servidor el fichero sip.conf añadiendo a la clave privada, al certificado y al certificado de la CA
+4- Concatenar clave privada al certificado de cada cliente
+
+	cat certificado.pem >> key.pem
+5- Para la CA, cortar por BEGIN-END (por defecto solo está begin-end)
+
+6- Para la centraliza, cortar por begin-end (quedarse con lo encerrado entre begin certificate y end certificate)
+
+3- Distribuir certificados
+	copiar ca en todos
+	copiar cliente en cada cliente
+	copiar servidor en centralita
+
+	orden: scp archivo alumno@ip:/ruta
+
+PUERTO EN BLINK : 5061
