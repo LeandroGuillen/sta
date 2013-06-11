@@ -1,0 +1,14 @@
+V	131112162204Z		01	unknown	/C=ES/ST=Murcia/O=UM/OU=STA/CN=agenteSNMP
+V	131119163441Z		02	unknown	/C=ES/ST=Murcia/O=UM/OU=STA/CN=155.54.225.20/emailAddress=antonio.vidla@uemsd.
+V	131119163531Z		03	unknown	/C=ES/ST=Murcia/O=UM/OU=STA/CN=155.54.225.19/emailAddress=adsd@us.es
+V	140111130730Z		04	unknown	/C=ES/ST=Murcia/O=UM/OU=STA/CN=ipAsterisk/emailAddress=antonio.vidal
+V	140111142228Z		05	unknown	/C=ES/ST=Murcia/O=UM/CN=Agente SNMP
+V	140111142530Z		06	unknown	/C=ES/ST=Murcia/O=UM/CN=Manejador SNMP
+V	140111163904Z		07	unknown	/C=ES/ST=Murcia/O=UM/CN=asterisk.com
+V	140111164304Z		08	unknown	/C=ES/ST=Murcia/O=UM/CN=cliente.com
+V	140111173025Z		09	unknown	/C=ES/ST=Murcia/O=UM/CN=192.168.1.36
+V	140111173628Z		0A	unknown	/C=ES/ST=Murcia/O=UM/CN=192.168.1.36/emailAddress=cliente
+V	140115195511Z		0B	unknown	/C=ES/ST=Murcia/O=UM/CN=agente
+V	140115195549Z		0C	unknown	/C=ES/ST=Murcia/O=UM/CN=manejador
+V	140117104649Z		0F	unknown	/C=ES/ST=Murcia/O=UM/CN=192.168.1.39
+V	140117110251Z		10	unknown	/C=ES/ST=Murcia/O=UM/CN=192.168.1.38
